@@ -1,6 +1,6 @@
 # azure_update_record_set
 Updates a record set of type 'A' in Azure DNS with your public IP address.
-Can be used to dynamically updates a 'A' record set in Azure basead in your actual Public IP.
+Can be used to dynamically updates a 'A' record set in Azure based in the Public IP of your network.
 This is usefull for lab environment where your internet does not have a static IP and you have open ports in your modem/router.
 
 # Requirements
@@ -11,13 +11,11 @@ $ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri https://aka.ms/
 ````
 
 ## Environment Variables
-* dns_updater_login
-    * Azure account with "DNS Zone Contributor" RBAC.
+`dns_updater_login` - Azure account with "DNS Zone Contributor" RBAC.
 ````
 dns_updater_login=joseph@contoso.com 
 ````
-* dns_updater_password
-  * Password of the Azure account
+`dns_updater_password` - Password of the Azure account
 ````
 dns_updater_password=pass1234
 ````
